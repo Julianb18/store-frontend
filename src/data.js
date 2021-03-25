@@ -19,7 +19,7 @@ const data = {
       image: "/images/razer.jpg",
       price: 80.95,
       brand: "Razer",
-      rating: 4.5,
+      rating: 4.0,
       numReviews: 13,
       description: "Not a bad mouse at all give it a try",
     },
