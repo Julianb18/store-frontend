@@ -75,29 +75,33 @@ a.brand {
   justify-content: center;
 }
 
-/* Image */
-/* .img-container {
-  height: 30rem;
-  width: 20rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-img {
-  border-radius: 0.5rem;
-}
-img.medium {
-  max-width: 29rem;
-  width: 100%;
-}
-
 /* Card */
 .card {
   border: 0.1rem #c0c0c0 solid;
   background-color: #f8f8f8;
   border-radius: 0.5rem;
   margin: 1rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  height: 40rem;
 }
+.card-image {
+  width: 100%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.card-image img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
 .card-body {
   padding: 1rem;
 }
