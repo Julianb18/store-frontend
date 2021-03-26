@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Rating from "../../components/Rating/Rating";
 
 import data from "../../data";
+import "./ProductPage.css";
 
 const ProductPage = (props) => {
   const product = data.products.find((p) => p._id === props.match.params.id);
@@ -12,7 +14,8 @@ const ProductPage = (props) => {
         <div>Product Not Found</div>
       ) : (
         <div>
-          <div className="row">
+          <Link to="/">Back to home</Link>
+          <div className="row top">
             <div className="col-2">
               <img className="large" src={product.image} alt={product.name} />
             </div>
@@ -34,7 +37,7 @@ const ProductPage = (props) => {
               </ul>
             </div>
             <div className="col-1">
-              <div className="card card-body">
+              <div className="to-cart-card">
                 <ul>
                   <li>
                     <div className="row">
@@ -55,7 +58,7 @@ const ProductPage = (props) => {
                     </div>
                   </li>
                   <li>
-                    <button className="primary block">Add To Cart</button>
+                    <button className="cart-btn">Add To Cart</button>
                   </li>
                 </ul>
               </div>
