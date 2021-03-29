@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import MessageBox from "../../components/MessageBox/MessageBox";
-import { addToCart } from "../../redux/actions/cartActions";
+import { addToCart, removeFromCart } from "../../redux/actions/cartActions";
 
 import "./CartPage.css";
 
@@ -22,7 +22,7 @@ const CartPage = (props) => {
   }, [productId, qty, dispatch]);
 
   const removeFromCartHandler = (id) => {
-    // deleteAction
+    dispatch(removeFromCart(id));
   };
 
   const checkoutHandler = () => {
@@ -30,12 +30,12 @@ const CartPage = (props) => {
   };
 
   return (
-    <div className="row top">
+    <div className="cart-page">
       <div className="col-2">
         <h1>Shopping cart</h1>
         {cartItems.length === 0 ? (
           <MessageBox>
-            Cart Is Empty. <Link to="/">Go Shopping</Link>
+            Cart Is Empty. <Link to="/">Return To Store</Link>
           </MessageBox>
         ) : (
           <ul>
