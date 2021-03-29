@@ -1,17 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Rating from "../../components/Rating/Rating";
+import { useSelector, useDispatch } from "react-redux";
 
-import data from "../../data";
+import Rating from "../../components/Rating/Rating";
+import LoadingBox from "../../components/LoadingBox/LoadingBox";
+import MessageBox from "../../components/MessageBox/MessageBox";
+import { detailsProduct } from "../../redux/actions/productActions";
 import "./ProductPage.css";
 
 const ProductPage = (props) => {
-  const product = data.products.find((p) => p._id === props.match.params.id);
+  const dispatch = useDispatch();
+  const productId = props.match.params.id;
+
+  const productDetails = useSelector((state) => state.productDetails);
+  const { loading, error, product } = productDetails;
+
+  useEffect(() => {
+    dispatch(detailsProduct(productId));
+  }, [dispatch, productId]);
 
   return (
-    <>
-      {!product ? (
-        <div>Product Not Found</div>
+    <div>
+      {loading ? (
+        <LoadingBox />
+      ) : error ? (
+        <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <div>
           <Link to="/">Back to home</Link>
@@ -66,7 +79,7 @@ const ProductPage = (props) => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
