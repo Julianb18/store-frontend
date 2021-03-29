@@ -9,10 +9,10 @@ function App() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
-  const itemArr = cartItems.map((item) => item.qty);
-  const cartTotal = itemArr.reduce((acc, curr) => {
-    return acc + curr;
-  }, 0);
+  // const itemArr = cartItems.map((item) => item.qty);
+  // const cartTotal = itemArr.reduce((acc, curr) => {
+  //   return acc + curr;
+  // }, 0);
 
   return (
     <BrowserRouter>
@@ -27,7 +27,7 @@ function App() {
             <Link to="/cart">
               Cart
               {cartItems.length > 0 && (
-                <span className="badge">{cartTotal}</span>
+                <span className="badge">{cartItems.length}</span>
               )}
             </Link>
             <Link to="/signin">Sign In</Link>

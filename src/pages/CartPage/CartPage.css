@@ -1,0 +1,26 @@
+.small-img {
+  max-width: 5rem;
+  width: 100%;
+}
+
+.min-30 {
+  min-width: 30rem;
+}
+
+.card-right {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.card-right > * {
+  margin-bottom: 0.5rem;
+}
+
+button.checkout-btn {
+  background: linear-gradient(rgb(131, 209, 173), rgb(28, 206, 123));
+  color: #203040;
+  width: 100%;
+}
