@@ -31,8 +31,8 @@
 }
 
 .card-right {
-  border: 0.1rem #c0c0c0 solid;
-  background-color: #f8f8f8;
+  border: 0.1rem var(--product-border) solid;
+  background-color: var(--product-off-white);
   border-radius: 0.5rem;
   margin: 1rem;
   padding: 1rem;
@@ -43,7 +43,7 @@
 }
 
 button.checkout-btn {
-  background: linear-gradient(rgb(131, 209, 173), rgb(28, 206, 123));
-  color: #203040;
+  background: linear-gradient(var(--theme-primary-shade), var(--theme-primary));
+  color: var(--theme-text);
   width: 100%;
 }

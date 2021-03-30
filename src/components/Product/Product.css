@@ -1,7 +1,7 @@
 /* Card */
 .card {
-  border: 0.1rem #c0c0c0 solid;
-  background-color: #f8f8f8;
+  border: 0.1rem var(--product-border) solid;
+  background-color: var(--product-off-white);
   border-radius: 0.5rem;
   margin: 1rem;
   width: 25rem;
@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: center;
   flex: 1;
-  background-color: #fff;
+  background-color: var(--default-white);
   border-radius: 0.5rem;
 }
 
@@ -29,10 +29,10 @@
   padding: 1rem;
 }
 .card-body a {
-  color: #1d2024;
+  color: var(--theme-text);
 }
 .card-body a:hover {
-  color: rgb(28, 206, 123);
+  color: var(--theme-primary);
 }
 .card-body > * {
   margin-bottom: 0.5rem;

@@ -1,8 +1,24 @@
 :root {
+  /* app theme */
   --theme-primary: rgb(28, 206, 123);
+  --theme-primary-shade: rgb(131, 209, 173);
   --theme-secondary: #203040;
+  --theme-text: #1d2024;
+  /* borders */
+  --product-border: #c0c0c0;
   --border-light: #a4a4a4;
   --border-dark: #404040;
+  /* product card bg */
+  --product-off-white: #f8f8f8;
+  /* icons */
   --badge: #f02020;
+  --rating: #f0c040;
+  /* alerts */
+  --alert-info-txt: #2020a0;
+  --alert-info-bg: #e0e0ff;
+  --alert-danger-txt: #a02020;
+  --alert-danger-bg: #ffe0e0e0;
+  --alert-success: #20a020;
+  /* defaults */
   --default-white: #ffffff;
 }

@@ -1,14 +1,14 @@
 select {
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 0.1rem solid #a4a4a4;
+  border: 0.1rem solid var(--border-light);
   font-size: 1.6rem;
-  background-color: #ffffff;
+  background-color: var(--default-white);
   cursor: pointer;
 }
 
 input:hover {
-  border: 0.1rem solid #404040;
+  border: 0.1rem solid var(--border-dark);
 }
 
 ul {
@@ -22,7 +22,7 @@ li {
 }
 
 .back {
-  color: #203040;
+  color: var(--theme-text);
 }
 
 .product-container {
@@ -48,8 +48,8 @@ li {
 }
 
 .to-cart-card {
-  border: 0.1rem #c0c0c0 solid;
-  background-color: #f8f8f8;
+  border: 0.1rem var(--product-border) solid;
+  background-color: var(--product-off-white);
   border-radius: 0.5rem;
   margin: 1rem;
   padding: 1rem;
@@ -60,15 +60,15 @@ li {
 }
 
 .success {
-  color: #20a020;
+  color: var(--alert-success);
 }
 .error {
-  color: #a02020;
+  color: var(--alert-danger-txt);
 }
 
 button.cart-btn {
-  background: linear-gradient(rgb(131, 209, 173), rgb(28, 206, 123));
-  color: #203040;
+  background: linear-gradient(var(--theme-primary-shade), var(--theme-primary));
+  color: var(--theme-text);
   width: 100%;
 }
 

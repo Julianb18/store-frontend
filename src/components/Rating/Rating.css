@@ -1,9 +1,9 @@
 /* Rating */
 .rating span {
-  color: #f0c040;
+  color: var(--rating);
   margin: 0.1rem;
 }
 
 .rating span:last-child {
-  color: rgb(26, 26, 26);
+  color: var(--default-text);
 }
