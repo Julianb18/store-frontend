@@ -37,7 +37,11 @@ const ProductPage = (props) => {
           </Link>
           <div className="product-container">
             <div className="img-wrapper">
-              <img className="large" src={product.image} alt={product.name} />
+              <img
+                className="img-large"
+                src={product.image}
+                alt={product.name}
+              />
             </div>
             <div className="info-wrapper">
               <ul>
