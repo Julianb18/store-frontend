@@ -1,0 +1,8 @@
+:root {
+  --theme-primary: rgb(28, 206, 123);
+  --theme-secondary: #203040;
+  --border-light: #a4a4a4;
+  --border-dark: #404040;
+  --badge: #f02020;
+  --default-white: #ffffff;
+}

@@ -31,7 +31,7 @@ const CartPage = (props) => {
 
   return (
     <div className="cart-page">
-      <div className="col-2">
+      <div className="left-col">
         <h1>Shopping cart</h1>
         {cartItems.length === 0 ? (
           <MessageBox>
@@ -41,7 +41,7 @@ const CartPage = (props) => {
           <ul>
             {cartItems.map((item) => (
               <li key={item.product}>
-                <div className="row">
+                <div className="cart-product">
                   <div>
                     <img
                       src={item.image}
@@ -49,7 +49,7 @@ const CartPage = (props) => {
                       className="small-img"
                     />
                   </div>
-                  <div className="min-30">
+                  <div className="product-name">
                     <Link to={`/product/${item.product}`}>{item.name}</Link>
                   </div>
                   <div>
@@ -83,7 +83,7 @@ const CartPage = (props) => {
           </ul>
         )}
       </div>
-      <div className="col-1">
+      <div className="right-col">
         <div className="card-right">
           <ul>
             <li>

@@ -32,12 +32,14 @@ const ProductPage = (props) => {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <div>
-          <Link to="/">Back to home</Link>
-          <div className="row top">
-            <div className="col-2">
+          <Link to="/" className="back">
+            Back to home
+          </Link>
+          <div className="product-container">
+            <div className="img-wrapper">
               <img className="large" src={product.image} alt={product.name} />
             </div>
-            <div className="col-1">
+            <div className="info-wrapper">
               <ul>
                 <li>
                   <h1>{product.name}</h1>
@@ -54,17 +56,17 @@ const ProductPage = (props) => {
                 </li>
               </ul>
             </div>
-            <div className="col-1">
+            <div className="info-wrapper">
               <div className="to-cart-card">
                 <ul>
                   <li>
-                    <div className="row">
+                    <div className="cart-row">
                       <div>Price</div>
                       <div className="price">€{product.price}</div>
                     </div>
                   </li>
                   <li>
-                    <div className="row">
+                    <div className="cart-row">
                       <div>Status</div>
                       <div className="price">
                         {product.countInStock > 0 ? (
@@ -78,7 +80,7 @@ const ProductPage = (props) => {
                   {product.countInStock > 0 && (
                     <>
                       <li>
-                        <div className="row">
+                        <div className="cart-row">
                           <div>Qty</div>
                           <div>
                             <select

@@ -5,12 +5,28 @@
   align-items: flex-start;
 }
 
+.left-col {
+  flex: 2 1 50rem;
+  margin-right: 2rem;
+}
+
+.cart-product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-col {
+  flex: 1 1 25rem;
+}
+
 .small-img {
   max-width: 5rem;
   width: 100%;
 }
 
-.min-30 {
+.product-name {
   min-width: 30rem;
 }
 

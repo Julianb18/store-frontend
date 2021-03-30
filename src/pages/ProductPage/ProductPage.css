@@ -21,16 +21,30 @@ li {
   margin-top: 1rem;
 }
 
-.row.top {
+.back {
+  color: #203040;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
-.col-1 {
+.img-wrapper {
+  flex: 2 1 50rem;
+}
+
+.info-wrapper {
   flex: 1 1 25rem;
 }
 
-.col-2 {
-  flex: 2 1 50rem;
+.cart-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .to-cart-card {

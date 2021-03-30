@@ -1,3 +1,5 @@
+@import "./utils/utils.css";
+
 html {
   font-size: 62.5%; /* 16px x 62.5 = 10px = 1rem */
   box-sizing: border-box;
@@ -27,7 +29,7 @@ body {
 }
 header {
   grid-area: header;
-  background-color: #203040;
+  background-color: var(--theme-secondary);
 }
 main {
   grid-area: main;
@@ -35,8 +37,8 @@ main {
 }
 footer {
   grid-area: footer;
-  background-color: #203040;
-  color: #ffffff;
+  background-color: var(--theme-secondary);
+  color: var(--default-white);
 }
 /* Common */
 
@@ -53,35 +55,35 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: rgb(28, 206, 123);
+  color: var(--theme-primary);
 }
 
 button {
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 0.1rem solid #a4a4a4;
+  border: 0.1rem solid var(--border-light);
   font-size: 1.6rem;
   cursor: pointer;
 }
 
 button:hover {
-  border: 0.1rem solid #404040;
+  border: 0.1rem solid var(--border-dark);
 }
 
 /* Header */
 header a {
-  color: #ffffff;
+  color: var(--default-white);
   padding: 1rem;
 }
 a.brand {
-  color: #ffffff;
+  color: var(--default-white);
   font-size: 3rem;
   font-weight: bold;
 }
 
 .badge {
-  background-color: #f02020;
-  color: #ffffff;
+  background-color: var(--badge);
+  color: var(--default-white);
   border-radius: 50%;
   padding: 0.4rem 0.7rem;
   font-size: 1.4rem;
