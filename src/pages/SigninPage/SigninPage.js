@@ -32,13 +32,13 @@ const SigninPage = (props) => {
 
   return (
     <div>
-      <form className="form" onSubmit={submitHandler}>
+      <form className="signin-form" onSubmit={submitHandler}>
         <div>
           <h1>Sign in</h1>
         </div>
         {loading && <LoadingBox></LoadingBox>}
         {error && <MessageBox variant="danger">{error}</MessageBox>}
-        <div className="form-inner">
+        <div className="signin-form-inner">
           <label htmlFor="email">Email address</label>
           <input
             type="email"
@@ -48,7 +48,7 @@ const SigninPage = (props) => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div className="form-inner">
+        <div className="signin-form-inner">
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -58,7 +58,7 @@ const SigninPage = (props) => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <div className="form-btn-wrapper">
+        <div className="signin-btn-wrapper">
           <button className="signin-btn" type="submit">
             Sign In
           </button>
@@ -68,7 +68,7 @@ const SigninPage = (props) => {
         <div className="new-customer-text">
           <p>New Customer?</p>
         </div>
-        <Link to="/register">
+        <Link to={`/register?redirect=${redirect}`}>
           <button>Create Gamer account</button>
         </Link>
       </div>
