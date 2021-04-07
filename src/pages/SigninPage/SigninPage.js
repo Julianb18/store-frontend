@@ -1,14 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import LoadingBox from "../../components/LoadingBox/LoadingBox";
+import MessageBox from "../../components/MessageBox/MessageBox";
 
+import { signin } from "../../redux/actions/userActions";
 import "./SigninPage.css";
 
-const SigninPage = () => {
+const SigninPage = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const redirect = props.location.search
+    ? props.location.search.split("=")[1]
+    : "/";
+
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo, loading, error } = userSignin;
+
+  const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
+    dispatch(signin(email, password));
   };
+
+  useEffect(() => {
+    if (userInfo) {
+      props.history.push(redirect);
+    }
+  }, [props.history, redirect, userInfo]);
 
   return (
     <div>
@@ -16,6 +36,8 @@ const SigninPage = () => {
         <div>
           <h1>Sign in</h1>
         </div>
+        {loading && <LoadingBox></LoadingBox>}
+        {error && <MessageBox variant="danger">{error}</MessageBox>}
         <div className="form-inner">
           <label htmlFor="email">Email address</label>
           <input
@@ -47,7 +69,7 @@ const SigninPage = () => {
           <p>New Customer?</p>
         </div>
         <Link to="/register">
-          <button>Create Gamer account</button>{" "}
+          <button>Create Gamer account</button>
         </Link>
       </div>
     </div>
