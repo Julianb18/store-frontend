@@ -1,0 +1,18 @@
+.checkout-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout-steps > div {
+  border-top: 0.3rem solid var(--product-border);
+  color: var(--product-border);
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+.checkout-steps > div.active {
+  border-top-color: var(--theme-primary);
+  color: var(--theme-primary);
+}
