@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import CartPage from "./pages/CartPage/CartPage";
 import HomePage from "./pages/HomePage/HomePage";
+import PaymentMethodPage from "./pages/PaymentMethodPage/PaymentMethodPage";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import ShippingPage from "./pages/ShippingPage/ShippingPage";
@@ -59,6 +60,7 @@ function App() {
           <Route path="/signin" component={SigninPage}></Route>
           <Route path="/register" component={RegisterPage}></Route>
           <Route path="/shipping" component={ShippingPage}></Route>
+          <Route path="/payment" component={PaymentMethodPage}></Route>
         </main>
         <footer className="row center">All right reserved</footer>
       </div>
